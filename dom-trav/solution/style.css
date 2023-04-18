@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+  position: relative;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+  height: 35rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 800px;
+  margin: 0 auto;
+}
+
+#container-ul {
+  list-style: none;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.card {
+  background-color: aquamarine;
+  border: black 2px solid;
+  height: 8rem;
+  width: 15rem;
+  margin: 5px;
+  padding: 20px;
+  text-align: center;
+  display: inline-block;
+}
+
+#form-div {
+  text-align: center;
+}
+
+.submitBtn {
+  height: 35px;
+  width: 100px;
+  background-color: rgb(120, 31, 31);
+  color: aliceblue;
+}
+
+.submitBtn:hover {
+  background-color: rgba(120, 31, 31, 0.9);
+  cursor: pointer;
+}
