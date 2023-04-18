@@ -1,13 +1,11 @@
-// ADD A NEW CARD TO CONTAINER
-
 // Create variable for container div
 // *must have something on the page to append new el to*
-// var containerUl = document.querySelector(".container");
+// var containerUl = document.querySelector("#ul-container");
 
 //  ** Steps in creating a new HTML element **
 
 // - Create new element
-// var newCard = document.createElement("div");
+// var newCard = document.createElement("li");
 
 // -If there are attributes associated with this element, add them here
 // newCard.setAttribute("class", "card");

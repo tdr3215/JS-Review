@@ -2,15 +2,15 @@
 
 // Create variable for container div
 // *must have something on the page to append new el to*
-// var containerUl = document.querySelector(".container");
+// var containerUl = document.querySelector("#container-ul");
 
 //  ** Steps in creating a new HTML element **
 
 // - Create new element
-// var newCard = document.createElement("div");
+// var newCard = document.createElement("li"); // <li></li>
 
 // -If there are attributes associated with this element, add them here
-// newCard.setAttribute("class", "card");
+// newCard.setAttribute("class", "card"); // <li class= "card"></li>
 
 // - Add content to the new element
 // newCard.textContent = "Card 4"; // - good for unknown values
@@ -26,7 +26,6 @@
 
 // What do we need to do?
 // - Create a button and append to page
-// - Create an button and append to page
 // - Create function(s) to execute on click
 // - Create a 'click' event listener
 
@@ -36,8 +35,9 @@
 
 // 2nd Step: Create functions for click event
 function renderCards() {}
+renderCards();
 
 function handleInput(e) {}
 
 // 3rd Step: Add event listener
-formDiv.addEventListener("submit", function () {});
+formDiv.addEventListener("submit", handleInput);
