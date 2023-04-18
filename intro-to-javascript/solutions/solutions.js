@@ -33,6 +33,9 @@ var numOfContestants = 14;
 console.log(evenOrOdd(numOfContestants));
 
 // 5.
+
+var numZero = 0;
+var zero = "0";
 console.log(zero == numZero); // true -- checks for value (0 == 0)
 console.log(zero === numZero); // false -- checks for type and value (string 0 != number 0)
 
@@ -46,9 +49,22 @@ console.log(genres);
 var romAndPop = genres.slice(0, 2);
 console.log(romAndPop);
 // 6c.
-var upperCaseGenres = genres.map(function (genre) {
-    
-});
+var upperCaseGenres = genres.map(function (genre) {});
+
+// 7
+var johnsBirthday = {
+  name: "John",
+  birthYear: 2005,
+  birthDay: "May 2nd",
+  guests: [
+    { name: "Julie", broughtGift: true, numOfPres: 2 },
+    { name: "Patricia", broughtGift: false, numOfPres: 0 },
+    { name: "Sammy", broughtGift: true, numOfPres: 3 },
+  ],
+  greet: function () {
+    console.log("Happy Birthday!");
+  },
+};
 // 7a.
 console.log(johnsBirthday.birthYear);
 // 7b.
