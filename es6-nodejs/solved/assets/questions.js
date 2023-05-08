@@ -1,6 +1,9 @@
 const inquirer = require("inquirer");
+
+// LIST OF OPERATIONS FOR APP
 const operations = ["Add task", "List tasks", "Exit"];
 
+// QUESTION BANK
 const questionBank = {
   start: {
     type: "list",
@@ -23,7 +26,13 @@ const questionBank = {
     },
   ],
 };
+
+// DESTRUCTURING OBJECTS
 const { add, start } = questionBank;
+
+// ** DEFINING FUNCTIONS **
+
+// PROMPT USER FOR QUESTIONS
 const promptUser = async (questions) => {
   try {
     const answers = await inquirer.prompt(questions);
@@ -33,16 +42,20 @@ const promptUser = async (questions) => {
   }
 };
 
+// EXIT PROGRAM
 const exit = () => {
   console.log("Closing app...Bye!");
   return;
 };
 
-// return string containing choice
+// INITIALIZE APP
 const init = async () => {
-  //   const newVar = questionBank.start
-  const { task_choice } = await promptUser(start);
+  /*   
+  DESTRUCTURING THE ANSWER
+  */
 
+  const { task_choice } = await promptUser(start);
+  //   same as --> const task = promptUser(start).task_choice
   if (task_choice === "Exit") {
     exit();
   } else {
@@ -50,6 +63,7 @@ const init = async () => {
   }
 };
 
+// CREATE A NEW TASK
 const createTask = async (arr) => {
   const new_task = await promptUser(add);
   arr.push(new_task);
@@ -58,10 +72,14 @@ const createTask = async (arr) => {
     init();
   }
 };
+
+// LIST ALL TASKS
 const listTasks = (arr) => {
   console.log(...arr);
   init();
 };
+
+// EXPORT MODULE
 module.exports = {
   createTask,
   operations,

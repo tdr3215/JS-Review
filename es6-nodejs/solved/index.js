@@ -13,6 +13,7 @@ const {
 
 // Initialize application
 
+// DESTRUCTURING ARRAYS
 const [addTask, listAll, exitApp] = operations;
 let taskList = [];
 
