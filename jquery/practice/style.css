@@ -1,0 +1,17 @@
+.card {
+  background-color: #767676;
+  color: #f1f7ed;
+}
+
+
+.btn-info {
+  background-color: #1b264f;
+  border-color: #1b264f;
+}
+
+.btn-info:hover {
+  background-color: hsla(227, 49%, 21%, 0.65);
+  border-color: hsla(227, 49%, 21%, 0.65);
+}
+
+

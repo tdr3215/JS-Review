@@ -1,8 +1,8 @@
-var config = {
-  API_KEY: "N0QHTy8mKvtbv15cw4XCwErb-H9CBjvWLP80wPQ54rQ",
-  BASE_URL: "https://api.unsplash.com/photos/random/?client_id=",
-};
-
+// var config = {
+//   API_KEY: [replace_with_API_Key],
+//   BASE_URL: "https://api.unsplash.com/photos/random/?client_id=",
+// };
+import test from "../test";
 // jQuery
 
 // Create a Card with info from the form
@@ -30,6 +30,14 @@ var config = {
 var picturesDiv = $("#pictures-div");
 
 // CARD CREATION
+
+
+
+
+
+
+
+
 // var cardDiv = $("<div>").addClass("card mt-3").css("width", "18rem");
 // var cardImg = $("<img>")
 //   .addClass("card-img-top")
@@ -37,26 +45,12 @@ var picturesDiv = $("#pictures-div");
 //     "src",
 //     "https://images.unsplash.com/profile-1441298803695-accd94000cac?ixlib%3Drb-0.3.5%26q%3D80%26fm%3Djpg%26crop%3Dfaces%26cs%3Dtinysrgb%26fit%3Dcrop%26h%3D32%26w%3D32%26s%3D7cfe3b93750cb0c93e2f7caec08b5a41&sa=X&ved=2ahUKEwii3tHdmsP-AhWElGoFHaG4BsUQgwN6BAgJEAE&biw=1440&bih=789&dpr=2"
 //   );
-
 // var cardBody = $("<div>").addClass("card-body");
 // var cardtext = $("<p>").addClass("card-text").text("This is some card text!");
 // var cardTitle = $("<h5>").addClass("card-title").text("Card Title");
 // var cardBtn = $("<a>").addClass("btn btn-info").text("Click Me!");
 // cardBody.append(cardTitle, cardtext, cardBtn);
 // cardDiv.append(cardImg, cardBody);
-// picturesDiv.append(cardDiv);
-
-// var cardDiv = $("<div>").addClass("card mt-3").css("width", "18rem");
-// var cardImg = $("<img>")
-//   .addClass("card-img-top")
-//   .attr(
-//     "src",
-//     "https://images.unsplash.com/profile-1441298803695-accd94000cac?ixlib%3Drb-0.3.5%26q%3D80%26fm%3Djpg%26crop%3Dfaces%26cs%3Dtinysrgb%26fit%3Dcrop%26h%3D32%26w%3D32%26s%3D7cfe3b93750cb0c93e2f7caec08b5a41&sa=X&ved=2ahUKEwii3tHdmsP-AhWElGoFHaG4BsUQgwN6BAgJEAE&biw=1440&bih=789&dpr=2"
-//   );
-// var cardBody = $("<div>").addClass("card-body");
-// var cardtext = $("<p>").addClass("card-text").text("This is some card text!");
-// var cardTitle = $("<h5>").addClass("card-title").text("Card Title");
-// var cardBtn = $("<a>").addClass("btn btn-info").text("Click Me!");
 
 // mainDiv.append(cardDiv);
 
@@ -70,6 +64,7 @@ var posts = [
   // },
 ];
 
+// explain how to use bootstrap to reference html structure
 function createPost(postObj) {
   var cardDiv = $("<div>").addClass("card mt-3 mx-2").css("width", "12rem");
   var cardImg = $("<img>").addClass("card-img-top").attr("src", postObj.img);
@@ -92,6 +87,7 @@ function renderPosts() {
   }
 
   inputEl.val("");
+  console.log();
 }
 
 // AJAX calls
@@ -118,7 +114,6 @@ function handleSubmit(e) {
     method: "GET",
   }).then(function (response) {
     var post = response[0];
-    console.log(response);
     // console.log(post.alt_description, post.urls.regular, queryTerm);
     var newPost = {
       description: post.alt_description,
