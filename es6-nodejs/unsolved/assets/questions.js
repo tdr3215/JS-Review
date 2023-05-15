@@ -28,45 +28,43 @@ const questionBank = {
 };
 
 // DESTRUCTURING OBJECTS
-const { add } = questionBank;
+const { add, start } = questionBank;
+// var addTask = questionBank.add; --> Equivalent
 
 // ** DEFINING FUNCTIONS **
 
-// PROMPT USER FOR QUESTIONS
+// PROMPT USER FOR QUESTIONS --> input: array | output: string
+
+// inquirer.prompt({
+//   type: "input",
+//   name: "testing",
+//   message: "What is your name?",
+// }).then((answer)=>{
+//   console.log(answer)
+// });
+
 const promptUser = async (questions) => {
   const userInput = await inquirer.prompt(questions);
   return userInput;
 };
+// promptUser(start);
 
-// EXIT PROGRAM
-const exit = () => {
-  console.log("Closing app...Bye!");
-  return;
-};
-
-// CONFIRM THAT THEY'RE DONE
-
-
-// CREATE A NEW TASK
-const createTask = async (arr) => {
+// CREATE A NEW TASK --> input: array | output: string
+const createTask = async () => {
   const new_task = await promptUser(add);
-  arr.push(new_task);
+  console.log(new_task);
+  // arr.push(new_task);
   if (new_task) {
     console.log(`Successfully added new task:\n ${JSON.stringify(new_task)}`);
+    return new_task;
   }
 };
 
-// LIST ALL TASKS
-const listTasks = (arr) => {
-  console.log(...arr);
-};
+
 
 // EXPORT MODULE
 module.exports = {
   createTask,
   operations,
-  listTasks,
-  exit,
   questionBank,
-  //   ,
 };

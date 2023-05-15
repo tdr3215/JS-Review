@@ -4,8 +4,8 @@ const fs = require("fs");
 const {
   createTask,
   operations,
-  init,
   listTasks,
+  questionBank,
   exit,
 } = require("./assets/questions");
 
@@ -16,15 +16,15 @@ const {
 // DESTRUCTURING ARRAYS
 const [addTask, listAll, exitApp] = operations;
 let taskList = [];
+const { start } = questionBank;
 
-const manageTasks = async () => {
-  let userInput = await init();
+
+const manageTasks = async (input) => {
   // extra --> figure out how to keep the app going until user exits
 
-  switch (userInput) {
+  switch (input) {
     case addTask:
       createTask(taskList);
-
       break;
     case listAll:
       listTasks(taskList);
@@ -38,4 +38,16 @@ const manageTasks = async () => {
   }
 };
 
-manageTasks();
+inquirer.prompt(start).then((ans) => {
+  manageTasks(ans.task_choice);
+});
+
+//const continuePrompt = async () => {
+  //   const confirm = await promptUser({
+  //     type: "confirm",
+  //     name: "continue",
+  //     message: "Would you like to add another",
+  //   });
+  
+  //   return confirm.continue;
+  // };
