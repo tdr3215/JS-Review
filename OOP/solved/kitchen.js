@@ -14,7 +14,7 @@ class Kitchen extends Room {
     const current_furniture = this.furniture;
 
     if (current_furniture) {
-      return this.appliances.concat(...current_furniture);
+      console.log(this.appliances.concat(...current_furniture));
     } else {
       return this.appliances;
     }

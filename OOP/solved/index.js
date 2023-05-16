@@ -20,4 +20,6 @@ kid_bedroom.includesBathroom();
 
 const kitchenette = new Kitchen("kitchenette", "green", "small");
 kitchenette.getFurniture();
+kitchenette.addFurniture("dining table", "chairs");
+kitchenette.getFurniture();
 kitchenette.printInfo();
